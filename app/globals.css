@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 220 60% 10%;
+        --foreground: 0 0% 100%;
+        --muted: 210 40% 25%;
+        --muted-foreground: 215.4 16.3% 85%;
+        --popover: 220 60% 10%;
+        --popover-foreground: 0 0% 100%;
+        --border: 214.3 31.8% 35%;
+        --input: 214.3 31.8% 35%;
+        --card: 220 60% 10%;
+        --card-foreground: 0 0% 100%;
+        --primary: 222.2 47.4% 15%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 25%;
+        --secondary-foreground: 0 0% 100%;
+        --accent: 210 40% 25%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 100% 50%;
+        --destructive-foreground: 210 40% 98%;
+        --ring: 215 20.2% 70.1%;
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 220 60% 10%;
+        --foreground: 0 0% 100%;
+        --muted: 223 47% 25%;
+        --muted-foreground: 215.4 16.3% 85%;
+        --accent: 216 34% 35%;
+        --accent-foreground: 0 0% 100%;
+        --popover: 220 60% 10%;
+        --popover-foreground: 0 0% 100%;
+        --border: 216 34% 35%;
+        --input: 216 34% 35%;
+        --card: 220 60% 10%;
+        --card-foreground: 0 0% 100%;
+        --primary: 222.2 47.4% 15%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 222.2 47.4% 25%;
+        --secondary-foreground: 0 0% 100%;
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 210 40% 98%;
+        --ring: 216 34% 35%;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a40;
+    color: white;
+    overflow-x: hidden;
+}
+
+.landing-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a40;
+    color: white;
+}
+
+header {
+    background-color: #6c63ff;
+    color: white;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    color: white;
+}
+
+p {
+    font-size: 1.2em;
+    color: white;
+}
+
+.hero {
+    padding: 40px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #574b90;
+}
+
+.features {
+    background-color: #1a1a40;
+    color: white;
+    padding: 40px 0;
+}
+
+footer {
+    background-color: #1a1a40;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s linear;
+    box-shadow: 0 0 10px white;
+}
+
+.sparkles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.sparkle {
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, red, blue, green, yellow, orange, violet);
+    position: absolute;
+    border-radius: 50%;
+    animation: sparkle-flow 1.5s ease-out;
+}
+
+@keyframes sparkle-flow {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2) translateY(-50px);
+    }
+}
