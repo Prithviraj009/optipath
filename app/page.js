@@ -33,8 +33,8 @@ const LandingPage = () => {
       <div className="cursor"></div> {/* Custom cursor */}
 
       <header>
-        <h1>TSP Route Optimizer</h1>
-        <p>Optimizing travel routes using Google Maps API</p>
+        <h1>OPTIPATH</h1>
+        <p>Optimizing travel routes </p>
       </header>
       <main>
         <section className="hero">
